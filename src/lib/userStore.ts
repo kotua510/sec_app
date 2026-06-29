@@ -1,4 +1,5 @@
 import { mkdir, readFile, writeFile } from "fs/promises";
+import os from "os";
 import path from "path";
 import bcrypt from "bcryptjs";
 import { demoUsers } from "@/lib/demoUsers";
@@ -20,7 +21,12 @@ export type StoredUser = {
   createdAt: string;
 };
 
-const USERS_FILE_PATH = path.join(process.cwd(), "data", "users.json");
+const DEFAULT_USERS_FILE_PATH = path.join(process.cwd(), "data", "users.json");
+const USERS_FILE_PATH = process.env.USERS_FILE_PATH
+  ? path.resolve(process.env.USERS_FILE_PATH)
+  : process.env.NODE_ENV === "production"
+    ? path.join(os.tmpdir(), "sec_app", "users.json")
+    : DEFAULT_USERS_FILE_PATH;
 
 async function ensureUsersFile() {
   await mkdir(path.dirname(USERS_FILE_PATH), { recursive: true });
