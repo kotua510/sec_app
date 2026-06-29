@@ -1,0 +1,372 @@
+[
+  {
+    "id": "demo-user-1",
+    "email": "user@example.com",
+    "name": "Demo User",
+    "role": "USER",
+    "passwordHash": "$2b$10$RpnBRgviLTW0ipxpJJbJrO4nFB4kyTqNURLGblOUl/tOBYxDQ/LKy",
+    "registeredImage": "data:image/svg+xml;charset=utf-8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22240%22%20height%3D%22240%22%20viewBox%3D%220%200%20240%20240%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22240%22%20height%3D%22240%22%20rx%3D%2224%22%20fill%3D%22%232563eb%22%20%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%22120%22%20cy%3D%2292%22%20r%3D%2242%22%20fill%3D%22white%22%20opacity%3D%220.95%22%20%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2256%22%20y%3D%22148%22%20width%3D%22128%22%20height%3D%2252%22%20rx%3D%2224%22%20fill%3D%22white%22%20opacity%3D%220.9%22%20%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22120%22%20y%3D%22212%22%20font-size%3D%2220%22%20font-family%3D%22Arial%2C%20sans-serif%22%20text-anchor%3D%22middle%22%20fill%3D%22%231f2937%22%3EUSER%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fsvg%3E",
+    "registrationAnswers": [],
+    "answerAnswers": [],
+    "createdAt": "2026-06-23T18:04:09.584Z"
+  },
+  {
+    "id": "demo-admin-1",
+    "email": "admin@example.com",
+    "name": "Admin User",
+    "role": "ADMIN",
+    "passwordHash": "$2b$10$BU2Yd9uCw5xLkZMT2D1h1uyRGrGfj6VKHGC2qEzbIyNguktRsmkyq",
+    "registeredImage": "data:image/svg+xml;charset=utf-8,%0A%20%20%20%20%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22240%22%20height%3D%22240%22%20viewBox%3D%220%200%20240%20240%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%22240%22%20height%3D%22240%22%20rx%3D%2224%22%20fill%3D%22%237c3aed%22%20%2F%3E%0A%20%20%20%20%20%20%3Ccircle%20cx%3D%22120%22%20cy%3D%2292%22%20r%3D%2242%22%20fill%3D%22white%22%20opacity%3D%220.95%22%20%2F%3E%0A%20%20%20%20%20%20%3Crect%20x%3D%2256%22%20y%3D%22148%22%20width%3D%22128%22%20height%3D%2252%22%20rx%3D%2224%22%20fill%3D%22white%22%20opacity%3D%220.9%22%20%2F%3E%0A%20%20%20%20%20%20%3Ctext%20x%3D%22120%22%20y%3D%22212%22%20font-size%3D%2220%22%20font-family%3D%22Arial%2C%20sans-serif%22%20text-anchor%3D%22middle%22%20fill%3D%22%231f2937%22%3EADMIN%3C%2Ftext%3E%0A%20%20%20%20%3C%2Fsvg%3E",
+    "registrationAnswers": [],
+    "answerAnswers": [],
+    "createdAt": "2026-06-23T18:04:09.584Z"
+  },
+  {
+    "id": "user-1782237897144",
+    "email": "takosei555@gmail.com",
+    "name": "池",
+    "role": "USER",
+    "passwordHash": "$2b$10$d9d7J/zhAOke/D4sT.MuXOzMn0eP95I9Y/5d0jgAFyVkP6HQHCLtS",
+    "registeredImage": "/images/1782237892976-4I_02s1.png",
+    "registrationAnswers": [],
+    "answerAnswers": [],
+    "createdAt": "2026-06-23T18:04:57.144Z"
+  },
+  {
+    "id": "user-1782266388483",
+    "email": "rm23005x@st.omu.ac.jp",
+    "name": "池神",
+    "role": "USER",
+    "passwordHash": "$2b$10$F1ujSNmeXMfGcIaBXC8IQOcJh62a6QNz5rNbAaDH97ssgJkFxXrT.",
+    "registeredImage": "",
+    "registrationAnswers": [
+      {
+        "question": "好きな食べ物は?",
+        "answerHash": "$2b$10$ZrNgdoQmPFG.m98zXe/9huLnrd1ECeVC8gmrVNvDBCmMuco9rbkXu"
+      },
+      {
+        "question": "好きなスポーツは?",
+        "answerHash": "$2b$10$zly7wBACcSsiEKPz6F9x5.t2FbRYqPS1F3AQQEy8lHP2LgZlz4KH2"
+      },
+      {
+        "question": "好きな数字は?",
+        "answerHash": "$2b$10$l4VqLa27EM4Qj0T7QIBb9uoJGTn1P995b7Qn5ViC5X4ul/i670ga."
+      },
+      {
+        "question": "勝ってたペットの名前は?(ないなら「なし」と書いてください)",
+        "answerHash": "$2b$10$kKkg4Cm1.RcVgjDIuf6jiuNOley1aj0M4yRydXzFJKzlkF2ik0MUS"
+      },
+      {
+        "question": "卒業した小学校は?(ないなら「なし」と書いてください)",
+        "answerHash": "$2b$10$AHFpIPty8bN.AHODQ/fmNeSyDL7fV8YIaegS5hEysXJBGKUMNGrDm"
+      },
+      {
+        "question": "卒業した中学校は?(ないなら「なし」と書いてください)",
+        "answerHash": "$2b$10$G80EyijR0CzZ62eHCL45g.EhbBsNM0Ybp.Q8ZJVuSiszkg5mib14a"
+      },
+      {
+        "question": "お母さんの旧姓は?",
+        "answerHash": "$2b$10$jEi6gXpAoD87z8i8vJkEMO.jFi3H5IVf/59Kg5epkKfKWv9vHa49a"
+      },
+      {
+        "question": "お父さんの旧姓は?",
+        "answerHash": "$2b$10$.2rmbaGmK3SlAlgRHgP5HuRXGHVylgbeOBI3xKeojZ6.BanlK1uE6"
+      },
+      {
+        "question": "今何歳ですか?",
+        "answerHash": "$2b$10$iuJdUMRWASgQIK1trBkCSuOBlz.Kt7TcFU4REe9khTfSJSqFX6/8i"
+      },
+      {
+        "question": "今何年生ですか?",
+        "answerHash": "$2b$10$XPcj0ptMjzlCJqbBT9zRm.LNRVvfBlyxxcpYzBOR3HRzusy2lIt82"
+      },
+      {
+        "question": "好きなフルーツは?",
+        "answerHash": "$2b$10$jKKNK/qevwYKfdXeXFDcKuteE35Soe1gpbo1ki63056vbJqoM9K2."
+      },
+      {
+        "question": "何回留年しましたか",
+        "answerHash": "$2b$10$PM58FFF2jUB1RbAM.o7uTOvLVBAPGDKMrYU7ApEqKRWm9M6uy9FR2"
+      }
+    ],
+    "answerAnswers": [],
+    "createdAt": "2026-06-24T01:59:48.483Z"
+  },
+  {
+    "id": "user-1782267293777",
+    "email": "example@ccevece.com",
+    "name": "23005",
+    "role": "USER",
+    "passwordHash": "$2b$10$7muE.wIAZBytrYlH0Eo5IOL.jNQxu78bq7lTbeNFhgPtyfbkgTqde",
+    "registeredImage": "",
+    "registrationAnswers": [
+      {
+        "question": "好きな食べ物は?",
+        "answerHash": "$2b$10$Mmab579qP29m9hAfjO2BC.oiAc4WspazvONC.8lKUdz7p3HovpUMO"
+      },
+      {
+        "question": "好きなスポーツは?",
+        "answerHash": "$2b$10$NXZc6Y0/cXzHR8ol6KPG/.wmKaawJNpOvXZhxnUE0b4Wlr.l2gbcO"
+      },
+      {
+        "question": "好きな数字は?",
+        "answerHash": "$2b$10$UhlitdDG1/QJI2T5qKHtRec6UmUEHyA9eLQJy8EVrqw/p9Iw.KMwK"
+      },
+      {
+        "question": "勝ってたペットの名前は?(ないなら「なし」と書いてください)",
+        "answerHash": "$2b$10$Hhn7l.D2F3bvGFdQAkQrj.JlRYFUWf3zbvydOUWBipFsq9Fn0Wxui"
+      },
+      {
+        "question": "卒業した小学校は?(ないなら「なし」と書いてください)",
+        "answerHash": "$2b$10$IWdd3hIC1m1CGeFHD/pR2OAB8JCOhZnu/v1CiH2ncuEn9gkKtyAQO"
+      },
+      {
+        "question": "卒業した中学校は?(ないなら「なし」と書いてください)",
+        "answerHash": "$2b$10$hGeyo8P6mmgD5jo4BgXo5eFSxtc3Y73Avr4CyImuDqVt/8muF0DiK"
+      },
+      {
+        "question": "お母さんの旧姓は?",
+        "answerHash": "$2b$10$1BKiSrrB.uGat9UTDDrcWe6l3DSKUwibtA.ktpNtbRtZ9sIuw0nne"
+      },
+      {
+        "question": "お父さんの旧姓は?",
+        "answerHash": "$2b$10$tLr6us7jtOHWK2cSPfUSWOmdVNMvKbnH40IvfQl4RnYncMXu4XKjG"
+      },
+      {
+        "question": "今何歳ですか?",
+        "answerHash": "$2b$10$/jy3QqjWY7.UAjP2SYEhxucDF.KHPwjzRJV/rmIyG2l/8tcq.AoQ6"
+      },
+      {
+        "question": "今何年生ですか?",
+        "answerHash": "$2b$10$wznfuaDB2/nFfktZdQWG6OgT8YasBmNscOLWcuHqBhNVzQhlkSWxe"
+      },
+      {
+        "question": "好きなフルーツは?",
+        "answerHash": "$2b$10$44IW6KwGD1eNm8d7uS5PgOMewUHy.gptL1TivFdG/cfz1Ho7zpQLS"
+      },
+      {
+        "question": "何回留年しましたか",
+        "answerHash": "$2b$10$cl0OPftfnam7Mr1KP8/speQbZsiHUrEL5I6E8G7jwItaq3T4K.elu"
+      }
+    ],
+    "answerAnswers": [],
+    "createdAt": "2026-06-24T02:14:53.777Z"
+  },
+  {
+    "id": "user-1782267405010",
+    "email": "aaaa@bbbb",
+    "name": "池神",
+    "role": "USER",
+    "passwordHash": "$2b$10$5iB.3Ph.j1E07FBNCn3pmOciMLRkcXNbNY4dhbbNjpEOue2xvZmGy",
+    "registeredImage": "",
+    "registrationAnswers": [
+      {
+        "question": "好きな食べ物は?",
+        "answerHash": "$2b$10$WESKFcSpMAPY1CThH29u8.4UmJ1ZKptrcYTKqT3NLNkxdvv8AtLj2"
+      },
+      {
+        "question": "好きなスポーツは?",
+        "answerHash": "$2b$10$HchTGrdvrkVBHk4PlVrfzObE3D.tcLm9.GQ7KK.SSjURI26Q5YvZ6"
+      },
+      {
+        "question": "好きな数字は?",
+        "answerHash": "$2b$10$mR7avNoiiYjJJc/UvuRUPOD2pntMJzYlpm.0x0B7VQMjpWtEivTnO"
+      },
+      {
+        "question": "勝ってたペットの名前は?(ないなら「なし」と書いてください)",
+        "answerHash": "$2b$10$aKsXvnnXzTx5BZaXDpzYvei4/XMwTq2ayvZVsK0MzWTu10KgYgQxa"
+      },
+      {
+        "question": "卒業した小学校は?(ないなら「なし」と書いてください)",
+        "answerHash": "$2b$10$xjUc7sIheDBhUVGqohE78.y8f3HYS4FL55bOo1FKnm7zsipeJMuFS"
+      },
+      {
+        "question": "卒業した中学校は?(ないなら「なし」と書いてください)",
+        "answerHash": "$2b$10$WRXAfIzjiaZJTR4rB5ovv.QYHGGqZmf9Tkml.n5fKJ/tR7d/5ylea"
+      },
+      {
+        "question": "お母さんの旧姓は?",
+        "answerHash": "$2b$10$DiFbAl8SqGeHoTNdgKNDT.cYNZ.EkAkA8e0C93xP0tc7IjpIknSNq"
+      },
+      {
+        "question": "お父さんの旧姓は?",
+        "answerHash": "$2b$10$LthGSfya5B5qDdOBTmYrfOPxbw8pNWEL/UdCNyJlIopvfGVeGGt5O"
+      },
+      {
+        "question": "今何歳ですか?",
+        "answerHash": "$2b$10$W6TnJjwD/DkkdcNTRd9uLe6lbOMSY6L3KXRUZqq6PmOe9zpJoA0Gy"
+      },
+      {
+        "question": "今何年生ですか?",
+        "answerHash": "$2b$10$Lpzyy9AiqIpFdtPirhLbeuAFq8dNtbJu0PkDb9tMA1XrsxQjHHE7G"
+      },
+      {
+        "question": "好きなフルーツは?",
+        "answerHash": "$2b$10$LesR8TEQsYn0H0YkepIQsOo16sevz2FqTGi.KHarC7HHHFP5q3BYC"
+      },
+      {
+        "question": "何回留年しましたか",
+        "answerHash": "$2b$10$s/d9bm7U8NkMSeHwHWijC.hniRp76c4e4Eyge33NXEQxzjhwB/M/e"
+      }
+    ],
+    "answerAnswers": [],
+    "createdAt": "2026-06-24T02:16:45.010Z"
+  },
+  {
+    "id": "user-1782715018242",
+    "email": "exam@exam",
+    "name": "exam",
+    "role": "USER",
+    "passwordHash": "$2b$10$9Rwph0NostFrvAyjsHlrJO.D.bCuW3dRW01dCKrts/XH0n3obMCX2",
+    "registeredImage": "",
+    "registrationAnswers": [
+      {
+        "question": "好きな食べ物は?",
+        "answerHash": "$2b$10$DxoObFWj1jq9/OF..9fwpe2IqFcdIQLzJo3zT0t0lREG8KAC2Zvue"
+      },
+      {
+        "question": "好きなスポーツは?",
+        "answerHash": "$2b$10$K7AgMu857iYKErWT/37oY.T/tvYrg9ctlOEIduzVzL2tQMf4G5s1S"
+      },
+      {
+        "question": "好きな数字は?",
+        "answerHash": "$2b$10$6jvu/Guuq.2PUZDpZQwNA.Ejf2Wt6YWtcpHFinzWp8dmvHS7KRrOq"
+      },
+      {
+        "question": "好きなフルーツは?",
+        "answerHash": "$2b$10$ZGL4epSVL9zsMNVppibonuW1mPetAV4Eq7AsdmcKYyxwLRV1vODpW"
+      },
+      {
+        "question": "勝ってたペットの名前は?(ないなら「なし」と書いてください)",
+        "answerHash": "$2b$10$t3JabqeYUdGf3DqXuL2LIeOoWuRsVx6dqS1zmef9B.gRnNGNevSVe"
+      },
+      {
+        "question": "卒業した小学校は?(ないなら「なし」と書いてください)",
+        "answerHash": "$2b$10$HNi9WUOA1KcOCmQadUU4ueh1LuLTWSs8EMWdZ4sncMn9Pb9/VSEk2"
+      },
+      {
+        "question": "卒業した中学校は?(ないなら「なし」と書いてください)",
+        "answerHash": "$2b$10$T0AidL.MlGruJR1OMnnhauaQ1VrPBzPhQtjjCihULx/pGc4vOFR4G"
+      },
+      {
+        "question": "お母さんの旧姓は?",
+        "answerHash": "$2b$10$uvyGbIe1hGm9EsXxL581quqLtPzv/hTn276/w0JRXHpXPZ9kazCcy"
+      },
+      {
+        "question": "お父さんの旧姓は?",
+        "answerHash": "$2b$10$dcVB8aHLVnJ8VSAZv3CqKOvLPIekW5TFE/gUuo15Z1aZuhCyZu2fO"
+      },
+      {
+        "question": "今何歳ですか?",
+        "answerHash": "$2b$10$dqpHMECQ71.wRobB.HEmvemifZEH3hSbQOYBI76079r.sMDsV93ZK"
+      },
+      {
+        "question": "今何年生ですか?",
+        "answerHash": "$2b$10$0u9eNAWRm7HApkhObsxbbe8lZrJ5EsX5S8kxqt2r4zTD4rdVKPjh2"
+      },
+      {
+        "question": "何回留年しましたか",
+        "answerHash": "$2b$10$hO19ruR8ecG2kEoXXyTQ2OOT4PDbXMprtLxSKmBRR4A19ml8S9ERW"
+      },
+      {
+        "question": "①今まで食べたパンの枚数は?",
+        "answerHash": "$2b$10$i5kONijZsX1dolztCnJiBOCG1XJNc0HETyVhYg4XgAzpSZ/iBPpvS"
+      },
+      {
+        "question": "②現時点で止められる時間は何秒?",
+        "answerHash": "$2b$10$W.HYW9psbUsBPBddqXUlQuH8z8F/yaqSaj5olSfskRAb0gRYl8gzu"
+      },
+      {
+        "question": "③よくなじむのは?",
+        "answerHash": "$2b$10$JzA8G8.NanQ9BlDGzcIuC.sOM06kLDSDQpSstaYWFNlDFwDVxmw/G"
+      },
+      {
+        "question": "④今、何問目?",
+        "answerHash": "$2b$10$O6Uj7xsjHSMqSYCj.7k2Duqlb1CgLx1e8mGHbJoyLCgPCCjhiDJFa"
+      },
+      {
+        "question": "⑤初恋の人の名前は?",
+        "answerHash": "$2b$10$QuJTV4ctVdqLTPsCJ2fojO4CSpLffo/pCWcdJgQEHdBeGSVJfrhfS"
+      },
+      {
+        "question": "⑥なるほど、ふーん",
+        "answerHash": "$2b$10$9DEJZV9bqbSavlmmoehc/uDifhb.pH1Lw/p0BVNH//KKTjeo6Nf1q"
+      }
+    ],
+    "answerAnswers": [
+      {
+        "question": "好きな食べ物は?",
+        "answerHash": "$2b$10$l0fL0Xh9DI7E9eZlOgOGvuD7.PJQUpy38UHgyH5YwvvdxuQllf77u"
+      },
+      {
+        "question": "好きなスポーツは?",
+        "answerHash": "$2b$10$wZxKAzEW02xq.FyhSIJeVezD8NAxBGYbJ69IVlYt7iW/uq0WJ.n4e"
+      },
+      {
+        "question": "好きな数字は?",
+        "answerHash": "$2b$10$WxJbj1N1SuptsXks/IDBFO8/KuZyUO5A3nt92VRw5lGvCFpVcjNZC"
+      },
+      {
+        "question": "好きなフルーツは?",
+        "answerHash": "$2b$10$w1M7dt9Y4jBvI2V4T01yCOfjuxkc35FM/oHeVk5801Y.bPqNgqtQ2"
+      },
+      {
+        "question": "勝ってたペットの名前は?(ないなら「なし」と書いてください)",
+        "answerHash": "$2b$10$0XaLA7t8HD8Wk1zkuOrMd.sDhZyCS5FsY3AcOH2QWsz4kJ59rWpRK"
+      },
+      {
+        "question": "卒業した小学校は?(ないなら「なし」と書いてください)",
+        "answerHash": "$2b$10$psAWSgWFCfmiNpMNrpazyu3wCn3iesGVL9WqVhFxMwTkssgwaYYvO"
+      },
+      {
+        "question": "卒業した中学校は?(ないなら「なし」と書いてください)",
+        "answerHash": "$2b$10$bZ/gFEzqNhKHMnmwE3X.Te5xSgmJDr0xr1lLnhGEMMfEYf9WwDmw."
+      },
+      {
+        "question": "お母さんの旧姓は?",
+        "answerHash": "$2b$10$0tQqrp197fhSxYCdpuXi0.ojCg7dVHo1NJRObfojqV0QE7ltm32sS"
+      },
+      {
+        "question": "お父さんの旧姓は?",
+        "answerHash": "$2b$10$XzDyTix1zKAV9hrY4qzd/e9tf7ADiC2Mr90ZB98oiZfw.rTupuxXm"
+      },
+      {
+        "question": "今何歳ですか?",
+        "answerHash": "$2b$10$3vo1kBghOtT1rfweaSxwKOLsAdCWM6CwjMAPH7NLchGoDQIfXyWNS"
+      },
+      {
+        "question": "今何年生ですか?",
+        "answerHash": "$2b$10$N.KdYfTiCUcbJEOrkhW.IuOiiCDe4dL.O65sZ4tXmUjC7BVoASmi6"
+      },
+      {
+        "question": "何回留年しましたか",
+        "answerHash": "$2b$10$UC6WX91CnURd.ue.oGQTueSvRLwALr/2i8/KSc85MIxQ2UO34NJ/q"
+      },
+      {
+        "question": "①今まで食べたパンの枚数は?",
+        "answerHash": "$2b$10$sVv7Zc6.aJ9/TV3J9ibB9.hjONhk8nM49QLYkcDHMvSj3WM873Ep2"
+      },
+      {
+        "question": "②現時点で止められる時間は何秒?",
+        "answerHash": "$2b$10$OwIkmPwBmjhjKwn9uQ7CUOh4N7bpxMdMtweM7Nh7apQ.2Hj7GqHLK"
+      },
+      {
+        "question": "③よくなじむのは?",
+        "answerHash": "$2b$10$.dDFpto8K/Jc2nc2DtfWruvs8IIHGYT9mFUOOHrBM2UpQGEl.RGYO"
+      },
+      {
+        "question": "④今、何問目?",
+        "answerHash": "$2b$10$QRpmkUJnwLYLxW4dSX6POu8sX6lu6xDB4i.AgqfCz4T0Vg5HuAoW6"
+      },
+      {
+        "question": "⑤初恋の人の名前は?",
+        "answerHash": "$2b$10$6Ct9uBwMBawDHfCqNZ74Buv9xMfSRpBkQZAamNwpowsUkSoj4TRpC"
+      },
+      {
+        "question": "⑥なるほど、ふーん",
+        "answerHash": "$2b$10$3PNQzpHzXhpRVo2GUau0reJqYgh9XKIpYdCWGcIIW/sSsU45TyYhO"
+      }
+    ],
+    "createdAt": "2026-06-29T06:36:58.242Z"
+  }
+]
