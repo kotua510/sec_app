@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50 px-6 py-12">
       <div className="mx-auto max-w-2xl">
-        <h1 className="mb-8 text-4xl font-bold text-gray-900">NextBlogApp へようこそ</h1>
+        <h1 className="mb-8 text-4xl font-bold text-gray-900">私の世界 へようこそ</h1>
 
         <div className="rounded-lg bg-white p-8 shadow">
           <div className="mb-6">
