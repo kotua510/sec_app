@@ -4,7 +4,7 @@ import Header from "@/app/_components/Header";
 import { SessionProvider } from "@/app/_contexts/SessionContext";
 
 export const metadata: Metadata = {
-  title: "NextBlogApp",
+  title: "セキュアなアプリ",
   description: "Built to learn Next.js and modern web development.",
 };
 
