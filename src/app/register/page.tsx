@@ -9,6 +9,7 @@ export default function RegisterPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const [secretAnswers, setSecretAnswers] = useState<string[]>(() => Array(secretQuestions.length).fill(""));
   const [error, setError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -86,15 +87,24 @@ export default function RegisterPage() {
             <label htmlFor="password" className="block text-sm font-medium text-gray-700">
               パスワード
             </label>
-            <input
-              type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="mt-1 w-full rounded-md border border-gray-300 px-4 py-2"
-              placeholder="パスワード"
-              required
-            />
+            <div className="mt-1 relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                id="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="w-full rounded-md border border-gray-300 px-4 py-2 pr-24"
+                placeholder="パスワード"
+                required
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword((prev) => !prev)}
+                className="absolute inset-y-0 right-0 mr-2 flex items-center rounded-md px-3 text-sm text-gray-600 hover:text-gray-900"
+              >
+                {showPassword ? "非表示" : "表示"}
+              </button>
+            </div>
           </div>
 
           <div className="space-y-4">

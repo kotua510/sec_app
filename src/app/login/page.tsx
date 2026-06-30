@@ -11,6 +11,7 @@ export default function LoginPage() {
   const router = useRouter();
   const [email, setEmail] = useState("user@example.com");
   const [password, setPassword] = useState("password");
+  const [showPassword, setShowPassword] = useState(false);
   const [secretAnswers, setSecretAnswers] = useState<string[]>(() => Array(secretQuestions.length).fill(""));
   const [loginMode, setLoginMode] = useState<"password" | "secret">("password");
   const [error, setError] = useState("");
@@ -93,14 +94,23 @@ export default function LoginPage() {
                 <label htmlFor="password" className="block text-sm font-medium text-gray-700">
                   パスワード
                 </label>
-                <input
-                  type="password"
-                  id="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="mt-1 w-full rounded-md border border-gray-300 px-4 py-2"
-                  placeholder="パスワード"
-                />
+                <div className="mt-1 relative">
+                  <input
+                    type={showPassword ? "text" : "password"}
+                    id="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="w-full rounded-md border border-gray-300 px-4 py-2 pr-24"
+                    placeholder="パスワード"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword((prev) => !prev)}
+                    className="absolute inset-y-0 right-0 mr-2 flex items-center rounded-md px-3 text-sm text-gray-600 hover:text-gray-900"
+                  >
+                    {showPassword ? "非表示" : "表示"}
+                  </button>
+                </div>
               </div>
             ) : (
               <div className="space-y-3">
