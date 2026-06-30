@@ -58,12 +58,12 @@ export const SessionProvider: React.FC<{ children: ReactNode }> = ({ children })
 
   const value = useMemo(
     () => ({
-      isLoggedIn: Boolean(token),
+      isLoggedIn: Boolean(user),
       user,
       login,
       logout,
     }),
-    [token, user, login, logout]
+    [user, login, logout]
   );
 
   return <SessionContext.Provider value={value}>{children}</SessionContext.Provider>;
