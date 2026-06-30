@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SecApp
 
-## Getting Started
+SecAppはNext.jsで作ったセキュア学習用アプリです。実装した内容をREADMEにまとめました。
 
-First, run the development server:
+## できること
+
+- メールアドレスとパスワードでログインできるようにしました。
+- 秘密の質問によるログインも使えるようにしました。
+- パスワードと秘密の質問の回答は `bcryptjs` でハッシュ化して保存しています。
+- JWTで認証トークンを発行して、アプリ内で認証状態を管理しています。
+- ログイン画面にパスワードの表示 / 非表示切り替えを実装しました。
+
+## セキュリティ設計
+
+- パスワードは平文で保存せず、`bcryptjs` でハッシュ化しています。
+- 秘密の質問の回答も同じくハッシュ化しています。
+- JWTは `jose` で発行し、期限付きのトークンとして使っています。
+- ログインAPIは認証に失敗した場合に詳細を出しすぎないようにしています。
+- セッション状態はクライアント側で保存しつつ、認証トークンの有効性を確認する形にしています。
+
+## 認証の流れ
+
+1. ユーザー登録画面で名前・メールアドレス・パスワード・秘密の質問回答を入力します。
+2. サーバー側でパスワードと回答をハッシュ化して保存します。
+3. ログイン画面でパスワードまたは秘密の質問を使って認証します。
+4. 認証に成功するとJWTトークンが返り、アプリ内でログイン状態を保持します。
+5. 画面上部のヘッダーでログイン済みかどうかが表示されます。
+
+## 実装した場所
+
+- `src/lib/userStore.ts`
+  - ユーザー登録時に `bcryptjs` でハッシュを生成しています。
+  - パスワードの重複登録を防ぐチェックを入れています。
+  - ユーザー情報は `data/users.json` に保存します。
+
+- `src/lib/auth.ts`
+  - JWTを `jose` で生成・検証しています。
+  - 12時間のトークン有効期限を設定しています。
+
+- `src/app/api/login/route.ts`
+  - ログイン処理を行い、成功時にトークンとユーザー情報を返します。
+
+- `src/app/api/register/route.ts`
+  - 登録処理を行い、必須項目が揃っているかチェックします。
+
+- `src/app/_contexts/SessionContext.tsx`
+  - セッション情報を保持し、ログアウト時に状態をクリアします。
+
+## ローカルでの実行
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ブラウザで [http://localhost:3000](http://localhost:3000) を開いてください。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 画像として貼るべきもの
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+以下の画像を用意して `public/images` に置き、READMEに貼ってください。
 
-## Learn More
+1. `screenshot-login.png` — ログイン画面（パスワード表示切替付き）
+2. `screenshot-register.png` — 登録画面（秘密の質問入力付き）
+3. `screenshot-session.png` — ログイン後のセッション状態表示
+4. `screenshot-token.png` — JWT認証フローの説明図
+5. `screenshot-security.png` — セキュリティ設計 (ハッシュ化・CSP・ヘッダー) の図
 
-To learn more about Next.js, take a look at the following resources:
+## 本番環境の注意
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `JWT_SECRET` を環境変数で設定してください。
+- `NODE_ENV=production` のときは HTTPS を使ってください。
+- `bcryptjs` のハッシュは適切に管理してください。

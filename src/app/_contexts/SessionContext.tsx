@@ -27,30 +27,32 @@ type SessionContextType = {
 const SessionContext = createContext<SessionContextType | undefined>(undefined);
 
 export const SessionProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [token, setToken] = useState<string | null>(null);
   const [user, setUser] = useState<UserInfo | null>(null);
 
   useEffect(() => {
-    const savedToken = window.localStorage.getItem("jwt_token");
-    const savedUser = window.localStorage.getItem("jwt_user");
+    const fetchSession = async () => {
+      try {
+        const response = await fetch("/api/session");
+        const result = await response.json();
+        if (response.ok && result.success && result.user) {
+          setUser(result.user);
+        } else {
+          setUser(null);
+        }
+      } catch {
+        setUser(null);
+      }
+    };
 
-    if (savedToken && savedUser) {
-      setToken(savedToken);
-      setUser(JSON.parse(savedUser));
-    }
+    fetchSession();
   }, []);
 
-  const login = useCallback((nextToken: string, nextUser: UserInfo) => {
-    window.localStorage.setItem("jwt_token", nextToken);
-    window.localStorage.setItem("jwt_user", JSON.stringify(nextUser));
-    setToken(nextToken);
+  const login = useCallback((_nextToken: string, nextUser: UserInfo) => {
     setUser(nextUser);
   }, []);
 
-  const logout = useCallback(() => {
-    window.localStorage.removeItem("jwt_token");
-    window.localStorage.removeItem("jwt_user");
-    setToken(null);
+  const logout = useCallback(async () => {
+    await fetch("/api/logout", { method: "POST" });
     setUser(null);
   }, []);
 

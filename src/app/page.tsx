@@ -34,7 +34,7 @@ export default function Home() {
                   <span className="block">権限: {user.role}</span>
                 </>
               ) : (
-                "ログインすると、JWTトークンがLocalStorageに保存され、ヘッダー上部にユーザー情報が表示されます。"
+                "ログインすると、JWTトークンはブラウザの HttpOnly セキュアクッキーに保存され、クライアント側から直接読み取られません。"
               )}
             </p>
           </div>
