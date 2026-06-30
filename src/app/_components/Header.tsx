@@ -10,7 +10,7 @@ const Header: React.FC = () => {
     <header>
       <div className="flex items-center justify-between bg-slate-800 px-6 py-4 text-white">
         <h1 className="text-xl font-bold">
-          <Link href="/">NextBlogApp</Link>
+          <Link href="/">セキュアなアプリ~</Link>
         </h1>
         <nav className="flex items-center gap-4">
           {isLoggedIn && user ? (
