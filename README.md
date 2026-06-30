@@ -72,13 +72,3 @@
 - src/app/_contexts/SessionContext.tsx
   - セッション情報を保持し、ログアウト時に状態をクリア
 
-## 画像として貼るべきもの
-
-以下の画像を用意して `public/images` に置き、READMEに貼ってください。
-
-1. `screenshot-login.png` — ログイン画面（パスワード表示切替付き）
-2. `screenshot-register.png` — 登録画面（秘密の質問入力付き）
-3. `screenshot-session.png` — ログイン後のセッション状態表示
-4. `screenshot-token.png` — JWT認証フローの説明図
-5. `screenshot-security.png` — セキュリティ設計 (ハッシュ化・CSP・ヘッダー) の図
-
