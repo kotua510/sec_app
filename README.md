@@ -1,6 +1,7 @@
 # セキュアなアプリ
 
 セキュアなアプリはNext.jsで作ったセキュリティアプリです。
+公開先URL : https://my-sec-app.vercel.app/
 
 ## 主な機能
 
