@@ -9,12 +9,22 @@ import { secretQuestions } from "@/lib/secretQuestions";
 export default function LoginPage() {
   const { isLoggedIn, login } = useSession();
   const router = useRouter();
-  const [email, setEmail] = useState("user@example.com");
-  const [password, setPassword] = useState("password");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [secretAnswers, setSecretAnswers] = useState<string[]>(() => Array(secretQuestions.length).fill(""));
   const [loginMode, setLoginMode] = useState<"password" | "secret">("password");
   const [error, setError] = useState("");
+
+  const switchToPasswordMode = () => {
+    setLoginMode("password");
+    setSecretAnswers(Array(secretQuestions.length).fill(""));
+  };
+
+  const switchToSecretMode = () => {
+    setLoginMode("secret");
+    setPassword("");
+  };
 
   useEffect(() => {
     if (isLoggedIn) {
@@ -44,6 +54,11 @@ export default function LoginPage() {
     const result = await response.json();
     if (!response.ok || !result.success) {
       setError(result.message ?? "ログインに失敗しました");
+      if (loginMode === "password") {
+        setPassword("");
+      } else {
+        setSecretAnswers(Array(secretQuestions.length).fill(""));
+      }
       return;
     }
 
@@ -57,7 +72,7 @@ export default function LoginPage() {
         <div className="rounded-lg bg-white p-8 shadow">
           <h1 className="mb-6 text-3xl font-bold text-gray-900">ログイン</h1>
 
-          <form onSubmit={handleLogin} className="space-y-4">
+          <form onSubmit={handleLogin} className="space-y-4" autoComplete="off">
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                 メールアドレス
@@ -69,20 +84,21 @@ export default function LoginPage() {
                 onChange={(e) => setEmail(e.target.value)}
                 className="mt-1 w-full rounded-md border border-gray-300 px-4 py-2"
                 placeholder="example@example.com"
+                autoComplete="email"
               />
             </div>
 
             <div className="flex gap-2">
               <button
                 type="button"
-                onClick={() => setLoginMode("password")}
+                onClick={switchToPasswordMode}
                 className={`flex-1 rounded-md border px-3 py-2 text-sm font-medium ${loginMode === "password" ? "border-blue-600 bg-blue-50 text-blue-700" : "border-gray-300 text-gray-700"}`}
               >
                 パスワードでログイン
               </button>
               <button
                 type="button"
-                onClick={() => setLoginMode("secret")}
+                onClick={switchToSecretMode}
                 className={`flex-1 rounded-md border px-3 py-2 text-sm font-medium ${loginMode === "secret" ? "border-blue-600 bg-blue-50 text-blue-700" : "border-gray-300 text-gray-700"}`}
               >
                 秘密の質問でログイン
@@ -102,6 +118,7 @@ export default function LoginPage() {
                     onChange={(e) => setPassword(e.target.value)}
                     className="w-full rounded-md border border-gray-300 px-4 py-2 pr-24"
                     placeholder="パスワード"
+                    autoComplete="new-password"
                   />
                   <button
                     type="button"
@@ -130,6 +147,7 @@ export default function LoginPage() {
                       }}
                       className="mt-1 w-full rounded-md border border-gray-300 px-4 py-2"
                       placeholder="回答"
+                      autoComplete="off"
                     />
                   </div>
                 ))}

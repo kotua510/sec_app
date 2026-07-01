@@ -53,7 +53,7 @@ export default function RegisterPage() {
       <div className="w-full max-w-md rounded-lg bg-white p-8 shadow">
         <h1 className="mb-6 text-3xl font-bold text-gray-900">ユーザー登録</h1>
 
-        <form onSubmit={handleRegister} className="space-y-4">
+        <form onSubmit={handleRegister} className="space-y-4" autoComplete="off">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700">
               名前
@@ -95,6 +95,7 @@ export default function RegisterPage() {
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full rounded-md border border-gray-300 px-4 py-2 pr-24"
                 placeholder="パスワード"
+                autoComplete="new-password"
                 required
               />
               <button
@@ -125,6 +126,7 @@ export default function RegisterPage() {
                     }}
                     className="mt-1 w-full rounded-md border border-gray-300 px-4 py-2"
                     placeholder="回答"
+                    autoComplete="off"
                     required
                   />
                 </div>

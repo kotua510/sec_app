@@ -5,11 +5,35 @@
 ## 主な機能
 
 - メールアドレスとパスワードでのログイン
-- 秘密の質問によるログイン
-- パスワードと秘密の質問の回答を bcryptjs でハッシュ化して保存
+- 秘密の質問によるログイン<br>
+- 以下に秘密の質問を登録する機能を示した画像を示します。<br>
+  <img src="public/images/login_tsecqu.png" alt="質問登録" width="400"><br>
+      図2 秘密の質問機能(登録)
+<br>
+以下に秘密の質問に回答している様子を示した画像を示します。
+<br>
+  <img src="public/images/login_secqu.png" alt="質問回答" width="400">
+      図3 秘密の質問機能(回答)<br>
+      <br>
+      <br>
+  ・パスワードと秘密の質問の回答を bcryptjs でハッシュ化して保存
 - JWTで認証トークンを発行し、アプリ内での認証状態の管理
-- ログイン画面にパスワードの表示 / 非表示切り替え
-- メールアドレスの形式指定
+- ログイン画面にパスワードの表示 / 非表示切り替え<br>
+  以下にパスワードを表示機能を示した画像を示します。<br>
+  <img src="public/images/login_pass.png" alt="パス表示" width="400"><br>
+      図2 パスワード表示切替機能(表示)
+<br>
+以下にパスワード非表示機能を示した画像を示します。
+<br>
+  <img src="public/images/login_not_pass.png" alt="パス非表示" width="400">
+      図3 パスワード表示切替機能(非表示)<br>
+      <br>
+      <br>
+  ・メールアドレスの形式指定 <br>
+ 以下の図1にメールアドレスの形式指定機能を示した画像を示します。<br>
+ <br>
+  <img src="public/images/login_maild.png" alt="メアド形式指定" width="400"><br>
+      図1 メールアドレスの形式指定機能
 
 ## セキュリティ関する設計
 
@@ -18,6 +42,7 @@
 - JWTは jose で発行し、期限付きのトークンとして使用
 - ログインAPIは認証に失敗した場合に詳細を非表示
 - セッション状態はクライアント側で保存しつつ、認証トークンの有効性を確認
+- 秘密の質問は1問ではなく18問全て解答させることで誰も突破できな完璧な圧倒的セキュリティを実現しました
 
 ## 認証の流れ
 
@@ -40,20 +65,3 @@
 
 - src/app/api/login/route.ts
   - ログイン処理を行い、成功時にトークンとユーザー情報を返す
-
-- src/app/api/register/route.ts
-  - 登録処理を行い、必須項目が揃っているかチェック
-
-- src/app/_contexts/SessionContext.tsx
-  - セッション情報を保持し、ログアウト時に状態をクリア
-
-## 画像として貼るべきもの
-
-以下の画像を用意して `public/images` に置き、READMEに貼ってください。
-
-1. `screenshot-login.png` — ログイン画面（パスワード表示切替付き）
-2. `screenshot-register.png` — 登録画面（秘密の質問入力付き）
-3. `screenshot-session.png` — ログイン後のセッション状態表示
-4. `screenshot-token.png` — JWT認証フローの説明図
-5. `screenshot-security.png` — セキュリティ設計 (ハッシュ化・CSP・ヘッダー) の図
-
