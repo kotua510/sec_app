@@ -7,10 +7,7 @@ export async function POST(request: Request) {
 
   const user = await findUserByEmail(email);
   if (!user) {
-    return NextResponse.json(
-      { success: false, message: "メールアドレスまたはパスワードが違います" },
-      { status: 401 }
-    );
+return NextResponse.json({ success: false, message: "メールアドレスまたはパスワードが違います" });
   }
 
   const hasPasswordAttempt = typeof password === "string" && password.length > 0;
@@ -81,10 +78,7 @@ export async function POST(request: Request) {
     }
   }
 
-  return NextResponse.json(
-    { success: false, message: "認証情報が正しくありません" },
-    { status: 401 }
-  );
+  return NextResponse.json({ success: false, message: "認証情報が正しくありません" });
 }
 
 export async function GET(request: Request) {

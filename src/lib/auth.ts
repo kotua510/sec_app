@@ -3,6 +3,10 @@ import { SignJWT, jwtVerify } from "jose";
 const DEFAULT_SECRET = "development-secret-change-me";
 export const JWT_SECRET = process.env.JWT_SECRET ?? DEFAULT_SECRET;
 
+if (process.env.NODE_ENV === "production" && !process.env.JWT_SECRET) {
+  throw new Error("JWT_SECRET must be set in production");
+}
+
 export type AuthUser = {
   id: string;
   email: string;

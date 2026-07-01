@@ -5,13 +5,10 @@ export async function GET(request: NextRequest) {
   const token = request.cookies.get("token")?.value;
 
   if (!token) {
-    return NextResponse.json(
-      {
-        success: false,
-        message: "ログインしていません",
-      },
-      { status: 401 }
-    );
+    return NextResponse.json({
+      success: false,
+      message: "ログインしていません",
+    });
   }
 
   try {
@@ -27,12 +24,9 @@ export async function GET(request: NextRequest) {
       },
     });
   } catch {
-    return NextResponse.json(
-      {
-        success: false,
-        message: "セッションが無効です",
-      },
-      { status: 401 }
-    );
+    return NextResponse.json({
+      success: false,
+      message: "セッションが無効です",
+    });
   }
 }
