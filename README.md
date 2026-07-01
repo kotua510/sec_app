@@ -65,3 +65,10 @@
 
 - src/app/api/login/route.ts
   - ログイン処理を行い、成功時にトークンとユーザー情報を返す
+
+- src/app/api/register/route.ts
+  - 登録処理を行い、必須項目が揃っているかチェック
+
+- src/app/_contexts/SessionContext.tsx
+  - セッション情報を保持し、ログアウト時に状態をクリア
+
