@@ -65,10 +65,16 @@
   - 12時間のトークン有効期限を設定
 
 - src/app/api/login/route.ts
-  - ログイン処理を行い、成功時にトークンとユーザー情報を返す
+  - ログイン処理を行い、成功時に httpOnly クッキーで JWT トークンをセットし、ユーザー情報を返す
 
 - src/app/api/register/route.ts
   - 登録処理を行い、必須項目が揃っているかチェック
+
+- src/app/api/session/route.ts
+  - 既存のセッションを検証し、ログイン状態を返す
+
+- src/app/api/logout/route.ts
+  - ログアウト時に token クッキーをクリアする
 
 - src/app/_contexts/SessionContext.tsx
   - セッション情報を保持し、ログアウト時に状態をクリア
